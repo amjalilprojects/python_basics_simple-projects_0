@@ -33,8 +33,12 @@ while True:
     print("Your guess is correct")
     print(f"the random number is: {random_number}") # this line is for debugging purposes
     break
+  elif user_guess > random_number:
+    print("You were above the number!")
+    print(f"the random number is: {random_number}") # this line is for debugging purposes
   else:
-    print("Your guess is incorrect.")
+    print("You were below the number!")
     print(f"the random number is: {random_number}") # this line is for debugging purposes
 
+# this is outside the while loop
 print(f"You got the answer in {guesses} guesses")
