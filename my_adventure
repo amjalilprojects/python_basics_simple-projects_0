@@ -1,0 +1,26 @@
+#This is from the youtube video by tim - https://www.youtube.com/watch?v=DLn3jOsNRVE&ab_channel=TechWithTim
+# choose_your_own_jpurney
+
+name = input("Type your name: ")
+print(f"Welcome {name} to this adventure!")
+
+answer = input("You are on a dirt road, it has come to an end and you can go left or right. Which way would like to go? ").lower()
+
+if answer == "left":
+  answer == input("As you walk down the path you can see a large hill. You can walk around it or climb it. What would you do? Type walk to walk or climb to climb: ").lower()
+  if answer == "walk":
+    print("You walked futher around the hill and fell into a hole.")
+  elif answer == "climb":
+    print("You had a hard climb up the large hill. You find the end of your path")
+  else:
+    print("Not a valid option. You lose.")
+elif answer == "right":
+  answer = input("You  come across a river. You see a river fishing boat. Do you walk along the river or cross it using the boat. Type walk for walk or cross to cross:").lower()
+  if answer == "walk":
+    print("You walk many miles as it is a long river. You come to the end of your journey. You win.")
+  elif answer == "cross":
+    print("As you cross the river, there is a sudden movement in the water, the boat rocks heavily, and fall overboard. You lose.")
+  else:
+    print("Not a vlid option. You lose.")
+else:
+  print("Not a vlid option. You lose.")
