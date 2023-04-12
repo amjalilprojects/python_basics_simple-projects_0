@@ -1,0 +1,43 @@
+#This is from the youtube video by tim - https://www.youtube.com/watch?v=DLn3jOsNRVE&ab_channel=TechWithTim
+# Rock paper scissors
+
+import random
+
+user_wins = 0
+computer_wins = 0
+
+options = ["rock", "paper", "scissors"] # using a list for options
+
+while True:
+  user_input = input("Type Rock/Paper/Scissors or Q to quit: ").lower()
+  if user_input == "q":
+    break # user will exit the while loop.
+  
+  if user_input not in options:
+    continue
+
+  random_number = random.randint(0, 2)
+  # rock: 0, paper: 1, scissors: 2
+  computer_pick = options[random_number] # the random_number will be the index of the list
+  print(f"Computer picked: {computer_pick}")
+
+  if user_input == "rock" and computer_pick == "scissors":
+    print("You win!")
+    user_wins += 1 # increment the user's wins
+    
+  elif user_input == "paper" and computer_pick == "rock":
+    print("You win!")
+    user_wins += 1
+  
+  elif user_input == "scissors" and computer_pick == "paper":
+    print("You win!")
+    user_wins += 1
+    
+  else:
+    print("You lost!")
+    computer_wins += 1 # increment the computer's wins
+
+# summarising the total wins for both the user and computer
+print(f"You won {user_wins} times.")
+print(f"The computer won {computer_wins} times")
+print("Goodbye!")
