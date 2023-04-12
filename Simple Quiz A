@@ -1,3 +1,4 @@
+# This is following a tutorial from https://www.youtube.com/watch?v=DLn3jOsNRVE&ab_channel=TechWithTim
 # this is a simple quiz game
 print("Welcome to the quiz.")
 playing = input("Would you like to play? ").lower()
