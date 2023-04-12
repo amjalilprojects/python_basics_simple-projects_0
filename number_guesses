@@ -6,7 +6,7 @@ top_of_range = input("Please type a number: ")
 
 if top_of_range.isdigit():
   top_of_range = int(top_of_range)
-  if top_of_range < 0:
+  if top_of_range <= 0:
     print("Please type a larger number next time.")
     quit()
 else:
