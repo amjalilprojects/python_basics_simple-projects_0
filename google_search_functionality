@@ -1,0 +1,11 @@
+# following the tutorial from the address: https://www.youtube.com/watch?v=OLr4bxl0vyE
+# creating a google search functionality
+
+from googlesearch import search
+
+# what you are asking google
+# for example best courses on coding
+query = "best courses on coding"
+
+for i in search(query, tld="co.in", num=10, stop=10, pause=2):
+  print(i)
