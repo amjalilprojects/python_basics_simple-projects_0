@@ -1,0 +1,11 @@
+# following the tutorial from the address: https://www.youtube.com/watch?v=OLr4bxl0vyE
+# a program that translate a statement to another language.
+
+# translate module
+from translate import Translator
+
+translator = Translator(to_lang='Arabic')
+
+translation = translator.translate("Hello, how are you? I'm fine, thanks.")
+
+print(translation)
