@@ -1,0 +1,10 @@
+# following the tutorial from the address: https://www.youtube.com/watch?v=OLr4bxl0vyE
+# a program that converts image to pdf
+
+import img2pdf
+
+with open('image.png', 'rb') as f:
+  img = f.read()
+  pdf_bytes = img2pdf.convert(img)  
+with open('output.pdf', 'wb') as f:
+  f.write(pdf_bytes)
