@@ -1,0 +1,17 @@
+# following the tutorial from the address: https://www.youtube.com/watch?v=LXsdt6RMNfY
+# a programs that access to a folder and allows selected files to be deleted
+# using the os module
+
+# os module gives access to the operating system.
+import os 
+
+# the file path to the file that needs deleting
+file_path = '/users/your_file_path/Downloads'
+
+print(file_path)
+
+if os.path.isfile(file_path):
+  os.remove(file_path)
+  print("File has been successfully been deleted.")
+else:
+  print("This file does not exist!!!")
