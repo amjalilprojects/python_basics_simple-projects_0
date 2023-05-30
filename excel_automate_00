@@ -1,8 +1,3 @@
-# following the tutorial from the address: https://www.youtube.com/watch?v=7YS6YDQKFh0
-# a program that automates excel with python
-
-from openpyxl import Workbook, load_workbook
-from openpyxl.utils  import get_column_letter
 
 # excel 2010 and greater
 #work_bk = load_workbook('Grades.xlsx') # in this case the excel is in the same directory
@@ -17,16 +12,22 @@ from openpyxl.utils  import get_column_letter
 
 # creating a new workbook
 #work_bk = Workbook()
-work_bk = load_workbook('excel.xlsx')
+work_bk = load_workbook('excel_file.xlsx')
 work_sh = work_bk.active
 work_sh.title = "Data"
 
+work_sh.append(["This", "is", "a", "string"])
+work_sh.append(["This", "is", "a", "string"])
+work_sh.append(["This", "is", "a", "string"])
+
+#working through the rows and columns of cells
 for row in range(1, 11):
   for col in range(1, 5):
     # character represented by an integer 65 is uppercase A
     # (65 + 0) is A (65 + 1) is B and so on.. 
     #char = chr(65 + col)
     char = get_column_letter(col) #get character represented by col
+    work_sh[char + str(row)] = char + str(row)
     print(work_sh[char + str(row)].value)
 
-work_bk.save('excel.xlsx')
+work_bk.save('excel_file.xlsx')
