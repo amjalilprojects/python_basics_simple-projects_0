@@ -1,0 +1,36 @@
+# following the tutorial from the address: https://www.youtube.com/watch?v=Oz3W-LKfafE
+# a program that multiclipboard
+import sys
+import clipboard
+import json
+
+SAVED_DATA = "clipboard.json"
+
+# a function that creates and saves json files.
+
+def save_items(filepath, data):
+  # create a new file or override an old file f if it already exits
+  with open(filepath, "w") as f: 
+    json.dump(data, f)
+    
+#a function that loads data
+def load_items(filepath):
+  with open(filepath, "r") as f: # read the file f
+    data = json.load(f)
+    return data
+
+if len(sys.argv) == 2:
+  command = sys.argv[1]
+
+  if command == "save":
+    key = input("Enter a key: ")
+    data[key] = clipboard.paste()
+    save_items( , data)
+  elif command == "load":
+    print("load")
+  elif command == "list":
+    print("list")
+  else:
+    print("Unlnown command.")
+else:
+  print("Please exactly one command.")
