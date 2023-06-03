@@ -8,29 +8,43 @@ SAVED_DATA = "clipboard.json"
 
 # a function that creates and saves json files.
 
-def save_items(filepath, data):
+def save_data(filepath, data):
   # create a new file or override an old file f if it already exits
   with open(filepath, "w") as f: 
     json.dump(data, f)
     
 #a function that loads data
-def load_items(filepath):
-  with open(filepath, "r") as f: # read the file f
-    data = json.load(f)
-    return data
+def load_data(filepath):
+  try: # error handling
+    with open(filepath, "r") as f: # read the file f
+      data = json.load(f)
+      return data
+  except:
+    return {} #returns an empty dictionary
+      
 
 if len(sys.argv) == 2:
   command = sys.argv[1]
+  data = load_data(SAVED_DATA)
 
   if command == "save":
     key = input("Enter a key: ")
     data[key] = clipboard.paste()
-    save_items( , data)
+    save_data(SAVED_DATA , data)
+    
   elif command == "load":
-    print("load")
+    key = input("Enter a key: ")
+    
+    if key in data:
+      clipboard.copy(data[key])
+      print("Data copied to clipboard.")
+    else:
+      print("Key does not exist.")
+      
   elif command == "list":
-    print("list")
+    print(data)
   else:
     print("Unlnown command.")
 else:
   print("Please exactly one command.")
+  
