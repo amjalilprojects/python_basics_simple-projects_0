@@ -1,0 +1,23 @@
+# https://www.youtube.com/watch?v=Oz3W-LKfafE&t=767s&ab_channel=TechWithTim
+# api from: https://openweathermap.org/api
+
+import requests
+
+
+API_KEY = "---api key----"
+BASE_URL = "https://api.openweathermap.org/data/2.5/weather"
+
+city = input("Enter a city name: ")
+request_url = f"{BASE_URL}?q={city}&appid={API_KEY}"
+response = requests.get(request_url) # sending a GET request
+
+if response.status_code == 200:
+    data = response.json()
+    #print(data)
+    weather = data["weather"][0]["description"]
+    #print(weather)
+    temperature = round(data["main"]["temp"] - 273.15, 2) # to convert kelvins to celsius
+    print(f"Weather: {weather}")
+    print(f"Temperature: {temperature} celsius")
+else:
+    print("An error occurred.")
