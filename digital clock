@@ -1,5 +1,4 @@
 # following the tutorial from the address: https://www.youtube.com/watch?v=at7rpdT8FeI
-# a program that multiclipboard
 from tkinter import *
 from tkinter.ttk import *
 
