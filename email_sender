@@ -1,3 +1,6 @@
+# This is an email sender program using python, and gmail
+# there has been changes since google has made changes to the email security
+# this file is under development reflecting the changes from google
 import smtplib
 import ssl
 from email.message import EmailMessage
