@@ -12,7 +12,7 @@ def alarm(seconds):
   time_elapsed = 0
 
   while time_elapsed < seconds:
-    time.sleep(1)
+    time.sleep(1) # This is the number of seconds of interval changing this can speed up or down the counts. 
     time_elapsed += 1
 
     print(CLEAR)
