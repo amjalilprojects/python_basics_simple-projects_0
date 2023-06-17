@@ -1,0 +1,24 @@
+# https://www.fesliyanstudios.com/royalty-free-music/downloads-c/edm-dance-music/40
+#from playsound import playsound
+import time
+
+CLEAR = "\033[2J" #ANSI escape characters
+CLEAR_AND_RETURN = "\033[H" # return the cursor to the home position so when print again it will print over what was there before
+
+def alarm(seconds):
+    time_elapsed = 0
+    
+    milliseconds = seconds *1000
+    
+    print(CLEAR)
+    while time_elapsed < milliseconds:
+        time.sleep(0.1) # 0.1s  is 100 milliseconds
+        time_elapsed += 100 # we want time elapsed to be 100 milliseconds
+        
+        time_left = milliseconds - time_elapsed
+        minutes_left = time_left // 60000
+        seconds_left = time_left % 60000
+        #milliseconds_left = seconds_left - time_elapsed
+        
+        milliseconds_left = 0
+        print(f"{CLEAR_AND_RETURN}{minutes_left:02d}:{seconds_left:04d}:{milliseconds_left:04d}")
