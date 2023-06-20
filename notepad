@@ -1,0 +1,8 @@
+# https://www.youtube.com/watch?v=gWeo8bZvu8o&ab_channel=CodingWithEvan
+from tkinter.filedialog import *
+import tkinter as tk
+
+canvas = tk.Tk()
+canvas.geometry("400x600")
+canvas.title("Notepad")
+canvas.config()
