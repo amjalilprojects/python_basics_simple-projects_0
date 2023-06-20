@@ -1,5 +1,7 @@
 # https://www.youtube.com/watch?v=gWeo8bZvu8o&ab_channel=CodingWithEvan
+from tkinter import *
 from tkinter.filedialog import *
+from tkinter import Button
 import tkinter as tk
 
 canvas = tk.Tk()
@@ -8,6 +10,9 @@ canvas.title("Notepad")
 canvas.config(bg = "white")
 
 b1 = Button(canvas, text="Open", bg = "white")
-b1.pack()
+b1.pack(side=LEFT)
+
+b2 = Button(canvas, text="Save", bg = "white")
+b2.pack(side=LEFT)
 
 canvas.mainloop()
