@@ -1,4 +1,5 @@
 # https://www.youtube.com/watch?v=gWeo8bZvu8o&ab_channel=CodingWithEvan
+# https://www.youtube.com/watch?v=gWeo8bZvu8o&ab_channel=CodingWithEvan
 from tkinter import *
 from tkinter.filedialog import *
 from tkinter import Button
@@ -15,7 +16,14 @@ def saveFile():
 
 def openFile():
     file = askopenfile(mode = "r", filetype = [("text files", "*.txt")])
-
+    if file is not None:
+        content = file.read()
+        entry.insert(INSERT, content)
+        
+        
+def clearFile():
+    entry.delete(1.0, END)
+    
 canvas = tk.Tk()
 canvas.geometry("400x600")
 canvas.title("Notepad")
