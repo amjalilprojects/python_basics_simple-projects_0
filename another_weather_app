@@ -4,7 +4,7 @@ import tkinter as tk
 import requests
 import time
 
-API_KEY = "---YOUR API KEY--"
+API_KEY = "7c4e5a25952f39a5f54cdf9bd204e3f0"
 BASE_URL = "https://api.openweathermap.org/data/2.5/weather"
 
 
@@ -16,8 +16,10 @@ def getWeather():
     temp = int(json_data["main"]["temp"] - 273.15)
     min_temp = int(json_data["main"]["temp_min"] - 273.15)
     max_temp = int(json_data["main"]["temp_max"] - 273.15)
-    pressure = json_data["main"]["pressure"] 
-    
+    pressure = json_data["main"]["pressure"]
+    humidity = json_data["main"]["humidity"]
+    wind = json_data["wind"]["speed"]
+    sunrise = time.strftime(%H:%M:%S, time.gmtime(json_data["sys"]["sunrise"]))
 
 canvas = tk.Tk()
 canvas.geometry("600X500")
