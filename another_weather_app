@@ -4,14 +4,19 @@ import tkinter as tk
 import requests
 import time
 
-API_KEY = "----API KEY---"
+API_KEY = "---YOUR API KEY--"
 BASE_URL = "https://api.openweathermap.org/data/2.5/weather"
 
 
 def getWeather():
     city = textfield.get()
     api = f"{BASE_URL}?q={city}&appid={API_KEY}"
-    json_data = requests.get(api).json
+    json_data = requests.get(api).json()
+    condition = json_data["weather"][0]["main"]
+    temp = int(json_data["main"]["temp"] - 273.15)
+    min_temp = int(json_data["main"]["temp_min"] - 273.15)
+    max_temp = int(json_data["main"]["temp_max"] - 273.15)
+    pressure = json_data["main"]["pressure"] 
     
 
 canvas = tk.Tk()
