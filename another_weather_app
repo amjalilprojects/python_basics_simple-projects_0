@@ -22,9 +22,13 @@ def getWeather():
     sunrise = time.strftime("%H:%M:%S", time.gmtime(json_data["sys"]["sunrise"] - 21600))
     sunset = time.strftime("%H:%M:%S", time.gmtime(json_data["sys"]["sunset"] - 21600))
     
-    final_info = condition + "\n" + str(temp) + "Celsius"
-    final_data = "\n" + "Max Temp: " + str(max_temp) + "\n" + "Min Temp: " + str(min_temp) + "\n" + "Pressure: " + str(pressure) + "\n" + "Humidity: " + str(humidity) + "\n" + "Wind Speed: " + str(wind)
-
+    #final_info = condition + "\n" + str(temp) + "Celsius"
+    final_info = f"{condition}\n{temp} Celsius"
+    #final_data = "\n" + "Max Temp: " + str(max_temp) + "\n" + "Min Temp: " + str(min_temp) + "\n" + "Pressure: " + str(pressure) + "\n" + "Humidity: " + str(humidity) + "\n" + "Wind Speed: " + str(wind)
+    final_data = f"\nMax Temp: {max_temp}\nMin Temp: {min_temp}\nPressure: {pressure}\nHumidity: {humidity}\nWind Speed: {wind}\nSunrise: {sunrise}\nSunset: {sunset}"
+    label1.config(text = final_info)
+    label2.config(text = final_data)
+    
 canvas = tk.Tk()
 canvas.geometry("600X500")
 canvas.title("Weather App")
