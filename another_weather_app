@@ -8,9 +8,10 @@ API_KEY = "7c4e5a25952f39a5f54cdf9bd204e3f0"
 BASE_URL = "https://api.openweathermap.org/data/2.5/weather"
 
 
-def getWeather():
+def getWeather(canvas):
     city = textfield.get()
     api = f"{BASE_URL}?q={city}&appid={API_KEY}"
+    
     json_data = requests.get(api).json()
     condition = json_data["weather"][0]["main"]
     temp = int(json_data["main"]["temp"] - 273.15)
@@ -30,7 +31,7 @@ def getWeather():
     label2.config(text = final_data)
     
 canvas = tk.Tk()
-canvas.geometry("600X500")
+canvas.geometry("600x500")
 canvas.title("Weather App")
 
 f = ("poppins", 15, "bold")
@@ -39,6 +40,8 @@ t = ("poppins", 35, "bold")
 textfield = tk.Entry(canvas, font = t)
 textfield.pack(pady = 20)
 textfield.focus()
+textfield.bind("<Return>", getWeather)
+
 
 label1 = tk.Label(canvas, font = t)
 label1.pack()
