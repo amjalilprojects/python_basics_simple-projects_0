@@ -1,0 +1,8 @@
+import pyqrcode 
+from pyzbar.pyzbar import decode
+from PIL import Image
+
+qr = pyqrcode.create("Test Case")
+qr.png("myCode.png", scale=8)
+
+d = decode(Image.open(myCode.png))
