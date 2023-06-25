@@ -5,4 +5,5 @@ from PIL import Image
 qr = pyqrcode.create("Test Case")
 qr.png("myCode.png", scale=8)
 
-d = decode(Image.open(myCode.png))
+d = decode(Image.open("myCode.png"))
+print(d[0].data.decode("ascii"))
