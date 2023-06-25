@@ -1,0 +1,13 @@
+# https://www.youtube.com/watch?v=gXl88MaxueY&list=PLVE5czp3KIIzqqZlsu-RSAUGgErJ6XrmE&index=7&ab_channel=CodingWithEvan
+
+import requests
+import tkinter as tk
+
+canvas = tk.Tk()
+canvas.geometry("900x600")
+canvas.title("News App")
+
+button = tk.Button(canvas, font = 24, text = "Reload", command = getNews)
+button.pack(pady = 20)
+
+label = tk.Label(canvas, font = )
