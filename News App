@@ -1,3 +1,6 @@
+# https://www.youtube.com/watch?v=gXl88MaxueY&list=PLVE5czp3KIIzqqZlsu-RSAUGgErJ6XrmE&index=7&ab_channel=CodingWithEvan
+
+
 import requests
 import tkinter as tk
 
@@ -11,7 +14,11 @@ def getNews():
     my_articles = []
     my_news = ""
     
-    for
+    for article in articles:
+        my_articles.append(article["title"])
+        
+    for i in range(10):
+        my_news = my_news + my_articles[i] + "\n"
     
 canvas = tk.Tk()
 canvas.geometry("900x600")
@@ -23,5 +30,6 @@ button.pack(pady = 20)
 label = tk.Label(canvas, font = 18, justify = "left")
 label.pack(pady = 20)
 
+getNews()
 
 canvas.mainloop()
