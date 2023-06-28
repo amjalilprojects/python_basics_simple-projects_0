@@ -1,3 +1,6 @@
+# a simple calculator program
+# following the video from: https://www.youtube.com/watch?v=pdy3nh1tn6I&ab_channel=freeCodeCamp.org
+
 def add(a, b):
     answer = a + b
     print(f"{a} + {b} = {answer}")
@@ -14,31 +17,35 @@ def div(a, b):
     answer = a / b
     print(f"{a} / {b} = {answer}")
     
+while True:
+    print("A. Addition")
+    print("B. Subtraction")
+    print("C. Multiplication")
+    print("D. Division")
+    print("E. Exit")
 
-print("A. Addition")
-print("B. Subtraction")
-print("C. Multiplication")
-print("D. Division")
-print("E. Exit")
+    choice = input("Input your choice: ").lower() # converts all inputs choice to lowercase
 
-choice = input("Input your choice: ").lower() # converts all choice to lowercase
-
-if choice == "a":
-    print("Addition")
-    a = int(input("Choose first number: "))
-    b = int(input("Choose second number: "))
-    add(a, b)
-elif choice == "b":
-    print("Subtraction")
-    a = int(input("Choose first number: "))
-    b = int(input("Choose second number: "))
-    sub(a, b)
-elif choice == "c":
-    print("Multiplication")
-    a = int(input("Choose first number: "))
-    b = int(input("Choose second number: "))
-    mul(a, b)
-elif choice == "d":
-    print("Division")
-    a = int(input("Choose first number: "))
-    b = int(input("Choose second number: "))
+    if choice == "a":
+        print("Addition")
+        a = int(input("Choose first number: "))
+        b = int(input("Choose second number: "))
+        add(a, b)
+    elif choice == "b":
+        print("Subtraction")
+        a = int(input("Choose first number: "))
+        b = int(input("Choose second number: "))
+        sub(a, b)
+    elif choice == "c":
+        print("Multiplication")
+        a = int(input("Choose first number: "))
+        b = int(input("Choose second number: "))
+        mul(a, b)
+    elif choice == "d":
+        print("Division")
+        a = int(input("Choose first number: "))
+        b = int(input("Choose second number: "))
+        div(a, b)
+    elif choice == "e":
+        print("End program")
+        quit() # exits the while loop
