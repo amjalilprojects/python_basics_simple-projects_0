@@ -22,3 +22,23 @@ print("D. Division")
 print("E. Exit")
 
 choice = input("Input your choice: ").lower() # converts all choice to lowercase
+
+if choice == "a":
+    print("Addition")
+    a = int(input("Choose first number: "))
+    b = int(input("Choose second number: "))
+    add(a, b)
+elif choice == "b":
+    print("Subtraction")
+    a = int(input("Choose first number: "))
+    b = int(input("Choose second number: "))
+    sub(a, b)
+elif choice == "c":
+    print("Multiplication")
+    a = int(input("Choose first number: "))
+    b = int(input("Choose second number: "))
+    mul(a, b)
+elif choice == "d":
+    print("Division")
+    a = int(input("Choose first number: "))
+    b = int(input("Choose second number: "))
