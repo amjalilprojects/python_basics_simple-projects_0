@@ -1,0 +1,26 @@
+import random
+
+name = ["Weilanf", "Hamdaan", "Ibrahim", "Ahmad", "Terri"]
+age = [20, 30, 200, 17, 96, 32, 44, 14, 74]
+num = [22, 33, 12, 89, 77, 100, 54, 23, 18, 41]
+city = [
+    "Chittagong", "Makkah", "Madina", "Beijing", "London", "Los Angeles",
+    "Paris"
+]
+
+
+def lib():
+    y = 0
+
+    while y < 10:
+        j = random.randint(0, len(name))
+        k = random.randint(0, len(age))
+        l = random.randint(0, len(num))
+        m = random.randint(0, len(city))
+        
+        madlib = f"My name is {name[j]}. I am {age[k]} old. I earn £{num[l]*10000} a year and I live in {city[m]}"
+        print(madlib)
+        
+        y += 1
+
+lib()
