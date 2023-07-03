@@ -1,5 +1,11 @@
+# https://www.youtube.com/watch?v=pdy3nh1tn6I&t=3081s&ab_channel=freeCodeCamp.org
 # a dictionary that stores questions and answers
-# have variable that  tracks the score of a player
+# a variable that  tracks the score of a player
+# loop through the dictionary using key value pairs
+# display each question to the user and allow them to answer
+# inform user if they are correct or incorrect
+# show the final result when quiz is completed
+
 
 
 
@@ -9,8 +15,22 @@ quiz = {
         "answer": "Paris"
     },
     "question2": {
-        "question": "What is the capital of Germany?"
+        "question": "What is the capital of Germany?",
         "answer": "Berlin"
     },
+    "question3": {
+        "question": " What is the first pillar of Islam?",
+        "answer": "Shahadah"
+    },
+    "question4": {
+        "question": "What is the capital of UK?",
+        "answer": "London"
+    },
+    "question5": {
+        "question": "What is the name of Islam's most holiest city?",
+        "answer": "Makkah"
+    } 
     
 }
+
+score = 0
