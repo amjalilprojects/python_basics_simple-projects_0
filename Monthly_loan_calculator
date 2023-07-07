@@ -1,0 +1,10 @@
+# monthly loan calculator
+# https://www.youtube.com/watch?v=pdy3nh1tn6I&t=3081s&ab_channel=freeCodeCamp.org
+
+def main():
+    print("This is a monthly loan calculator ")
+    print("")
+    
+    principal = float(input("Enter the loan amount: "))
+    apr = float(input("Enter the annual interest rate: "))
+    years = int(input("Enter amount of years: "))
