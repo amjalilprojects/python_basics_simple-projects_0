@@ -1,0 +1,14 @@
+# import random
+# define a function to roll the dice
+# create a dictionary that will have the drawings of the dice
+
+
+import random
+
+def roll_dice():
+    
+    roll = input("Roll the dice? (yes/no): ").lower()
+    
+    while roll == "yes":
+        dice_1 = random.randint(1, 6)
+        
