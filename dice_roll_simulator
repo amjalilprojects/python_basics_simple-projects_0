@@ -11,4 +11,10 @@ def roll_dice():
     
     while roll == "yes":
         dice_1 = random.randint(1, 6)
+        dice_2 = random.randint(1, 6)
         
+        print(f"dice rolled: {dice_1} and {dice_2}")
+        
+        roll = input("Roll again? (Yes/No): ").lower()
+
+roll_dice()
