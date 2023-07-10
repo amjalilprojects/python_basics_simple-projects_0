@@ -11,4 +11,6 @@ input_url = input("Enter the url of the site: ")
 def main(url):
     print("Checking connectivity ")
 
-urllib.urlopen()
+    response = urllib.urlopen(url)
+    print(f"Connected to {url} successfully")
+    print(f"The response code was: {response.getcode()}")
