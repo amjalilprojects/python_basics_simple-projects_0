@@ -5,12 +5,14 @@
 
 import urllib.request as urllib
 
-print("This is a site connectivity checker program.")
-input_url = input("Enter the url of the site: ")
-
 def main(url):
     print("Checking connectivity ")
 
     response = urllib.urlopen(url)
     print(f"Connected to {url} successfully")
     print(f"The response code was: {response.getcode()}")
+
+print("This is a site connectivity checker program.")
+input_url = input("Enter the url of the site: ")
+
+main(input_url)
