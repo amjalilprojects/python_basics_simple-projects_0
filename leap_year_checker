@@ -1,4 +1,6 @@
-year = int(input("Enter the year to check if it is a leap year: "))
+# A program that checks if a year is a leap year
+
+#year = int(input("Enter the year to check if it is a leap year: "))
 
 def leap_year(year):
     if year % 4 == 0:
@@ -13,3 +15,14 @@ def leap_year(year):
             print(f"The year {year} is a Leap year.")
     else:
         print(f"The year {year} is not a leap year.")
+        
+
+while True:
+    q = input("Would you like to check if a year is a leap year? (y/n) ").lower()
+    
+    if q == "y":
+        year = int(input("Enter the year to check if it is a leap year: "))
+
+        leap_year(year)
+    else:
+        break
