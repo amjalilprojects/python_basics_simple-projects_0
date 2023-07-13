@@ -1,0 +1,14 @@
+import random
+
+options = ["rock", "paper", "scissors"]
+
+while True:
+    
+    user_input = input("Choose rock, paper, scissors or exit: ")
+    computer_input = random.choice(options)
+
+    if options == computer_input:
+        print("It is a draw.")
+    elif options == "rock" and computer_input == "paper":
+        print("Computer wins")
+        elif option
