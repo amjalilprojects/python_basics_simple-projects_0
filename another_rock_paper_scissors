@@ -1,6 +1,9 @@
 import random
 
 exit = False
+user_points = 0
+computer_points = 0
+
 
 while exit == False:
     
@@ -22,3 +25,9 @@ while exit == False:
             print("Your input is rock")
             print("Computer input is paper")
             print("computer wins")
+            computer_points += 1
+        elif computer_input == "scissors":
+            print("Your input is rock")
+            print("Computer input is scissors")
+            print("You wins")
+            user_points += 1    
