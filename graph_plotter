@@ -8,7 +8,7 @@ y = []
 
 # acquiring a set of points that follow a function
 for t in x:
-    y.append(t**3) # the function is written here
+    y.append(pow(t, 3)) # the function is written here
     
 print(y)
 
